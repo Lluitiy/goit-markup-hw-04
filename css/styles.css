@@ -11,6 +11,7 @@ html {
     --brand-color: #2196f3;
     --primary-color: #212121;
     --description-color: #757575;
+    --background-icons: #F5F4FA;
 }
 
 p {
@@ -27,6 +28,7 @@ ul,
 li {
     padding: 0px;
     margin: 0px;
+    list-style-type: none;
 }
 
 
@@ -86,7 +88,6 @@ a.logo {
 }
 
 .navigators {
-    list-style-type: none;
     display: flex;
     gap: 50px;
     margin-left: 93px;
@@ -117,7 +118,6 @@ a.logo {
     gap: 50px;
     margin-left: 331px;
     padding: 0px;
-    list-style-type: none;
 }
 
 .head-info {
@@ -222,7 +222,6 @@ a.head-info:focus {
 .features {
     display: flex;
     gap: 30px;
-    list-style-type: none;
 }
 
 .feature {
@@ -241,6 +240,35 @@ a.head-info:focus {
     letter-spacing: 0.03em;
     color: var(--description-color);
 }
+
+.feature-item::before {
+    display: block;
+    content: "";
+    height: 120px;
+    padding: 25px 100px;
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--background-icons);
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.icon-antena::before {
+    background-image: url(../img/features_img/antenna.png);
+}
+
+.icon-clock::before {
+    background-image: url(../img/features_img/clock.png);
+}
+
+.icon-diagram::before {
+    background-image: url(../img/features_img/diagram.png);
+}
+
+.icon-astronaut::before {
+    background-image: url(../img/features_img/astronaut.png);
+}
 /* Чем мы занимаемся*/
 
 .head-doing {
@@ -258,7 +286,6 @@ a.head-info:focus {
     display: flex;
     gap: 30px;
     margin: 0px;
-    list-style-type: none;
 }
 .work-foto {
     display: block;
@@ -267,7 +294,7 @@ a.head-info:focus {
 .bg {
     background-color: #F5F4FA;
 }
-.team-head {
+.tittle {
     margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
@@ -276,16 +303,15 @@ a.head-info:focus {
     letter-spacing: 0.03em;
 }
 
-.team-members {
+.list-team {
     display: flex;
     gap: 30px;
-    list-style-type: none;
 
 
     outline: 2px solid #f50830;
 }
 
-.card-shadow {
+.item-team {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background: #FFFFFF;
@@ -306,12 +332,37 @@ a.head-info:focus {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--description-color);
+    margin-bottom: 16px;
 }
 
 .card-bot {
     padding-top: 30px;
     padding-bottom: 30px;
+}
 
+.socials-team {
+    width: 206px;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0px auto;
+    padding-bottom: 30px;
+
+    outline: 2px solid salmon;
+}
+
+.socials-team > .icon-social {
+    width: 44px;
+    height: 44px;
+    fill: red;
+    fill-opacity: green;
+    stroke: crimson;
+    stroke-width: 4px;
+}
+
+.socials-team .icon-social:hover {
+    fill: green;
 }
 /* Подвал */
 
@@ -341,7 +392,6 @@ a.location {
     display: flex;
     flex-direction: column;
     gap: 9px;
-    list-style-type: none;
 }
 
 a.footer-info {
@@ -367,7 +417,6 @@ a.footer-info:focus {
 }
 .project-buttons {
     cursor: pointer;
-    list-style-type: none;
     display: flex;
     gap: 8px;
     padding: 0px;
@@ -414,7 +463,6 @@ a.footer-info:focus {
 }
 
 .projects {
-    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
