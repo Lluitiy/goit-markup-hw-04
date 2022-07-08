@@ -65,8 +65,10 @@ footer {
 }
 
 .head {
-     display: flex;
-    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    text-align: center;
     background-color: #FFFFFF;
 }
 a.logo {
@@ -89,8 +91,8 @@ a.logo {
 
 .navigators {
     display: flex;
+    justify-content: space-between;
     gap: 50px;
-    margin-left: 93px;
     padding: 0px;
 }
 
@@ -115,8 +117,9 @@ a.logo {
 
 .head-infos {
     display: flex;
-    gap: 50px;
-    margin-left: 331px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
     padding: 0px;
 }
 
@@ -138,16 +141,25 @@ a.head-info:focus {
     color: var(--brand-color);
     text-decoration: none;
 }
+
+.head-item {
+    display: flex;
+    text-align: center;
+}
+
+.icon-head {
+    content: '';
+    width: 16px;
+    height: 12px;
+    stroke-width: 2px;
+    stroke: #f50830;
+    fill: black;
+}
 /* Шапка Профиля */
 
 .hero {
     padding: 200px 0px;
-    /* background-color:rgba(47, 48, 58, 0.4);
-    background-image: url(../img/img_background/background-img.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%; */
 }
-/* при добавлении тени в бгм как в видео у репеты не подгружается картинка вообще, почему? */
 .overlay {
     max-width: 1600px;
     height: 600px;
@@ -255,19 +267,22 @@ a.head-info:focus {
 }
 
 .icon-antena::before {
-    background-image: url(../img/features_img/antenna.png);
+    background-image: url(../img/icons/antenna.svg);
+    fill: rebeccapurple;
+    
+
 }
 
 .icon-clock::before {
-    background-image: url(../img/features_img/clock.png);
+    background-image: url(../img/icons/clock.svg);
 }
 
 .icon-diagram::before {
-    background-image: url(../img/features_img/diagram.png);
+    background-image: url(../img/icons/diagram.svg);
 }
 
 .icon-astronaut::before {
-    background-image: url(../img/features_img/astronaut.png);
+    background-image: url(../img/icons/astronaut.svg);
 }
 /* Чем мы занимаемся*/
 
@@ -352,7 +367,7 @@ a.head-info:focus {
     outline: 2px solid salmon;
 }
 
-.socials-team > .icon-social {
+.icon-socials {
     width: 44px;
     height: 44px;
     fill: red;
@@ -361,7 +376,7 @@ a.head-info:focus {
     stroke-width: 4px;
 }
 
-.socials-team .icon-social:hover {
+.icon-socials:hover {
     fill: green;
 }
 /* Подвал */
