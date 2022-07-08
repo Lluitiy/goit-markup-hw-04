@@ -66,7 +66,6 @@ footer {
 
 .head {
     display: flex;
-    justify-content: space-between;
     align-items:center;
     text-align: center;
     background-color: #FFFFFF;
@@ -93,6 +92,7 @@ a.logo {
     display: flex;
     justify-content: space-between;
     gap: 50px;
+    margin-left: 93px;
     padding: 0px;
 }
 
@@ -118,8 +118,10 @@ a.logo {
 .head-infos {
     display: flex;
     text-align: center;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
+    gap: 30px;
+    margin-left: 305px;
     padding: 0px;
 }
 
@@ -136,24 +138,31 @@ a.head-info {
 }
 
 
-a.head-info:hover,
-a.head-info:focus {
+.head-infos .head-info:hover,
+.head-infos .head-info:focus {
     color: var(--brand-color);
     text-decoration: none;
+}
+
+.head-infos .icon-head:focus,
+.head-infos .icon-head:hover {
+    fill: var(--brand-color);
+    stroke: var(--brand-color);
 }
 
 .head-item {
     display: flex;
     text-align: center;
+    gap: 10px;
+    align-items: baseline;
 }
 
 .icon-head {
     content: '';
     width: 16px;
     height: 12px;
-    stroke-width: 2px;
-    stroke: #f50830;
-    fill: black;
+    fill: var(--description-color);
+    stroke: var(--description-color);
 }
 /* Шапка Профиля */
 
@@ -352,33 +361,82 @@ a.head-info:focus {
 
 .card-bot {
     padding-top: 30px;
-    padding-bottom: 30px;
 }
 
 .socials-team {
     width: 206px;
     height: 44px;
     display: flex;
-    justify-content: space-between;
-    text-align: center;
-    margin: 0px auto;
-    padding-bottom: 30px;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0px auto 30px;
 
     outline: 2px solid salmon;
 }
 
-.icon-socials {
+/* .box-socials {
+    display: flex;
+    border-radius: 50%;
     width: 44px;
     height: 44px;
-    fill: red;
-    fill-opacity: green;
-    stroke: crimson;
-    stroke-width: 4px;
+    justify-items: center;
+    align-items: center;
+} */
+
+.box-socials:hover,
+.box-socials:focus {
+    background-color: var(--brand-color)
 }
 
-.icon-socials:hover {
-    fill: green;
+.icon-socials {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 12px;
+    object-fit: contain;
+
+    align-items: center;
+    justify-content: center;
+    fill-opacity: #1ee65d;
+    stroke-opacity: salmon;
+    fill: #AFB1B8;
+    stroke: #AFB1B8;
+
 }
+
+
+
+.icon-socials:hover,
+.icon-socials:focus {
+    fill: #FFFFFF;
+    stroke: #FFFFFF;
+}
+
+/* Постоянные клиенты */
+
+.customers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px auto;
+
+    outline: 2px solid salmon;
+}
+
+.customers-logo {
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    fill: #AFB1B8;
+}
+
+.customers-logo:focus,
+.customers-logo:hover {
+    border-color: var(--brand-color);
+    fill: var(--brand-color);
+}
+
 /* Подвал */
 
 a.footer-logo {
