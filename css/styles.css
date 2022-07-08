@@ -61,7 +61,6 @@ footer {
     padding: 0px 15px;
     align-items: center;
 
-    outline: 2px solid salmon;
 }
 
 .head {
@@ -121,8 +120,15 @@ a.logo {
     align-items: baseline;
     justify-content: space-between;
     gap: 30px;
-    margin-left: 305px;
+    margin-left: auto;
     padding: 0px;
+
+    color: var(--description-color);
+}
+
+.head-infos:focus,
+.head.infos:hover {
+    color: var(--brand-color);
 }
 
 .head-info {
@@ -158,11 +164,11 @@ a.head-info {
 }
 
 .icon-head {
-    content: '';
+    margin-right: 10px;
     width: 16px;
     height: 12px;
-    fill: var(--description-color);
-    stroke: var(--description-color);
+    fill: currentColor;
+    stroke: currentColor;
 }
 /* Шапка Профиля */
 
@@ -313,6 +319,7 @@ a.head-info {
 }
 .work-foto {
     display: block;
+    margin: 0px;
 }
 /* Наша команда */
 .bg {
@@ -363,55 +370,40 @@ a.head-info {
     padding-top: 30px;
 }
 
-.socials-team {
-    width: 206px;
-    height: 44px;
+.socials-list {
     display: flex;
-    justify-items: center;
-    align-items: center;
-    gap: 10px;
-    margin: 0px auto 30px;
-
-    outline: 2px solid salmon;
-}
-
-/* .box-socials {
-    display: flex;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    justify-items: center;
-    align-items: center;
-} */
-
-.box-socials:hover,
-.box-socials:focus {
-    background-color: var(--brand-color)
-}
-
-.icon-socials {
-    display: flex;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    padding: 12px;
-    object-fit: contain;
-
     align-items: center;
     justify-content: center;
-    fill-opacity: #1ee65d;
-    stroke-opacity: salmon;
-    fill: #AFB1B8;
-    stroke: #AFB1B8;
-
+    gap: 10px;
+    padding: 0px 0px 30px;
 }
 
+.socials-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
 
+    padding: 0px;
+    border: none;
+    fill: #AFB1B8;
+    background-color: #FFFFFF;
+}
 
-.icon-socials:hover,
-.icon-socials:focus {
+.socials-link:hover,
+.socials-link:focus {
     fill: #FFFFFF;
-    stroke: #FFFFFF;
+    background-color: var(--brand-color);
+}
+.socials-icon {
+    /* width: 44px;
+    height: 44px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Постоянные клиенты */
@@ -438,6 +430,17 @@ a.head-info {
 }
 
 /* Подвал */
+.footer {
+    display: flex;
+    align-items: baseline;
+    margin: 0px auto;
+}
+
+.footer-position {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
 
 a.footer-logo {
     display: flex;
@@ -480,6 +483,71 @@ a.footer-info:hover,
 a.footer-info:focus {
     text-decoration: none;
     color: var(--brand-color);
+}
+
+.style-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-left: 70px;
+}
+
+.tittle-footer {
+    display: flex;
+    width: 170px;
+    font-family: inherit;
+    font-style: normal;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.address-location {
+    display: flex;
+}
+
+.footer-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 0px 15px;
+}
+
+.footer-link {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 0px;
+    border: none;
+    fill: #FFFFFF;
+    background-color:rgba(255, 255, 255, 0.1);;
+
+}
+
+.footer-link:hover,
+.footer-link:focus {
+
+    fill: #FFFFFF;
+    background-color: var(--brand-color);
+}
+
+.footer-icon {
+    /* width: 44px;
+    height: 44px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* Указатели */
 
