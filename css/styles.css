@@ -389,21 +389,21 @@ a.head-info {
 
     padding: 0px;
     border: none;
-    fill: #AFB1B8;
+    color: #AFB1B8;
     background-color: #FFFFFF;
 }
 
-.socials-link:hover,
-.socials-link:focus {
-    fill: #FFFFFF;
+.socials-link:focus, 
+.socials-link:hover {
+    color: #FFFFFF;
     background-color: var(--brand-color);
 }
+
 .socials-icon {
-    /* width: 44px;
-    height: 44px; */
     display: flex;
     justify-content: center;
     align-items: center;
+    fill: currentColor;
 }
 
 /* Постоянные клиенты */
@@ -418,16 +418,29 @@ a.head-info {
 }
 
 .customers-logo {
-    border: 1px solid #AFB1B8;
+    border: 1px solid currentColor;
     border-radius: 4px;
-    fill: #AFB1B8;
+    fill: currentColor;
 }
 
-.customers-logo:focus,
+.customers-link {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    color: #AFB1B8;
+}
+
+.customers-link:focus,
+.customers-link:hover {
+    border-color: var(--brand-color);
+    color: var(--brand-color);
+    outline: var(--brand-color);
+}
+/* .customers-logo:focus,
 .customers-logo:hover {
     border-color: var(--brand-color);
     fill: var(--brand-color);
-}
+} */
 
 /* Подвал */
 .footer {
@@ -530,7 +543,7 @@ a.footer-info:focus {
     border-radius: 50%;
     padding: 0px;
     border: none;
-    fill: #FFFFFF;
+    color: #FFFFFF;
     background-color:rgba(255, 255, 255, 0.1);;
 
 }
@@ -538,17 +551,10 @@ a.footer-info:focus {
 .footer-link:hover,
 .footer-link:focus {
 
-    fill: #FFFFFF;
+    color: #FFFFFF;
     background-color: var(--brand-color);
 }
 
-.footer-icon {
-    /* width: 44px;
-    height: 44px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 /* Указатели */
 
 /*  ПОРТФОЛИО */
@@ -620,6 +626,11 @@ a.footer-info:focus {
     border: 1px solid #EEEEEE;
 }
 
+.projects-box:hover {
+    background: #FFFFFF;
+border: 1px solid #EEEEEE;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .project-name {
     text-align: start;
     width: 322px;
@@ -643,9 +654,16 @@ a.footer-info:focus {
 }
 .projects-foto {
     display: block;
+    padding: 0px;
+    margin: 0px;
 }
 
 .projects-bot {
+    border: 1px solid;
+    border-color: #EEEEEE;
+    border-top: none;
+    width: 370px;
+
     padding: 20px 24px;
 
 }
