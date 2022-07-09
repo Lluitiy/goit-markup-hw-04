@@ -418,13 +418,16 @@ a.head-info {
 }
 
 .customers-logo {
+    display: flex;
+    padding: 16px 32px;
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
     border: 1px solid currentColor;
     fill: currentColor;
 }
 
 .customers-link {
-    display: flex;
-    align-items: center;
     border-radius: 4px;
     color: #AFB1B8;
 }
